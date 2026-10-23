@@ -1,0 +1,14 @@
+YuzCall — Expo Go'da ishga tushirish
+
+1. Node.js o'rnating (https://nodejs.org, LTS versiya).
+2. iPhone'ga App Store'dan "Expo Go" ni o'rnating.
+3. Terminalda:
+     cd yuzcall/app
+     npm install
+     npm run go
+4. "Tunnel ready" chiqqach, QR kodni iPhone kamerasi bilan skanerlang.
+5. Ilovada yuqorida "Onlayn" yozuvi chiqishi kerak. Do'stingizning ID raqamini kiritib, qo'ng'iroq qiling.
+
+Eslatma: server do'stingizning Mac'ida ishlayapti (app/.env ichidagi manzil).
+U Mac'ni o'chirsa yoki tunnel qayta ishga tushsa, manzil o'zgaradi —
+yangi manzilni app/.env ga yozib, "npm run go" ni qayta ishga tushiring.

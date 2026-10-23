@@ -1,0 +1,16 @@
+# dependencies
+node_modules/
+
+# runtime data (ID ownership, bans, reports) — lives on the Render disk, never in git
+data/
+*.tmp
+
+# secrets
+.env
+.env.*
+
+# logs
+npm-debug.log*
+
+# macOS
+.DS_Store

@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: yuzcall-signaling
+    runtime: node
+    plan: starter
+    buildCommand: npm ci --omit=dev
+    startCommand: node index.js
+    healthCheckPath: /health
+    disk:
+      name: data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: DATA_FILE
+        value: /var/data/ids.json
+      - key: CF_TURN_KEY_ID
+        sync: false
+      - key: CF_TURN_API_TOKEN
+        sync: false
+      # Moderation: contact shown on /terms and /privacy, admin API key, Telegram alerts for reports.
+      - key: SUPPORT_EMAIL
+        value: cnc196762@gmail.com
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
